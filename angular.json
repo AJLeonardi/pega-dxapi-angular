@@ -79,8 +79,8 @@
           "options": {
             "browserTarget": "pegaapp-ng:build",
             "port": 8080,
-            "host": "angular-app-j6czi.ondigitalocean.app",
-            "disableHostCheck": false
+            "host": "0.0.0.0",
+            "disableHostCheck": true
           },
           "configurations": {
             "production": {
