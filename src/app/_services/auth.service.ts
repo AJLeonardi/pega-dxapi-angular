@@ -5,7 +5,7 @@ import { endpoints } from "./endpoints";
 import { getHomeUrl } from "../_helpers/appMisc";
 
 import { loginBoxType } from "./endpoints";
-import { Auth } from "../_helpers/Auth";
+import { Auth } from "../_helpers/auth";
 import { calendarFormat } from "moment";
 @Injectable({
   providedIn: "root",
