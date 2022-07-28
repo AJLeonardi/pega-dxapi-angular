@@ -23,6 +23,7 @@ export class NavigationComponent implements OnInit {
   userName$: string = "";
   subscription: Subscription;
   isProgress$: boolean = false;
+  logoImage$: string;
 
   progressSpinnerMessage: any;
   progressSpinnerSubscription: Subscription;
@@ -53,6 +54,8 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit() {
 
+    this.logoImage$ = "../assets/img/sofi-logo.svg";
+    
     if (sessionStorage.getItem("pega_ng_user")) {
       // if have a user, then have already logged in
       this.bLoggedIn = true;

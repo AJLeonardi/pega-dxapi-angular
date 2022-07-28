@@ -1,5 +1,5 @@
  
-<mat-card class="workitempanel-card" *ngIf="isLoaded" style="margin:0.5em; padding: 10px 10px 20px 10px;">
+<mat-card class="workitempanel-card layout-max-width" *ngIf="isLoaded" style="margin:0.5em; padding: 10px 10px 20px 10px;">
   <mat-card-header>
       <div class="pega-workitem-header">
           <div class="pega-workitem-breadcrumb" *ngIf="!isNewPage">
@@ -32,14 +32,14 @@
     
     <div class="pega-workitem-main flex-container" *ngIf="!isNewPage">
       <div class="pega-workitem-item">
-         <div style="padding: 5px;">
-          <app-topview #topview *ngIf="!isPage"></app-topview>
-          <app-page *ngIf="isPage" [pageID]="currentPageID$" [caseID]="currentCaseID$" ></app-page>
+          <div style="padding: 5px;">
+            <app-topview #topview *ngIf="!isPage"></app-topview>
+            <app-page *ngIf="isPage" [pageID]="currentPageID$" [caseID]="currentCaseID$" ></app-page>
           </div>   
       </div>
       <div class="pega-workitem-details" style="width: 30%" *ngIf="rightPanelMessage.bShowRightPanel">
         <div style="padding: 5px; height: 100%;">
-         <app-casedetails [caseID]="currentCaseID$"></app-casedetails>
+          <app-casedetails [caseID]="currentCaseID$"></app-casedetails>
         </div>
       </div>
 

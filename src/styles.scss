@@ -1,6 +1,13 @@
+@import '~@angular/material/theming';
+
+// Be sure that you only ever include 'mat-core' mixin once!
+// it should not be included for each theme.
+@include mat-core(); 
+
 /* You can add global styles to this file, and also import other style files */
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 /*@import "@angular/material/prebuilt-themes/pink-bluegrey.css";*/
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
@@ -8,3 +15,156 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     max-width: revert !important;
     white-space: pre-wrap;
 }
+
+.toolbar-logo {
+    width: 160px;
+}
+
+.mat-toolbar {
+    background: #FFFFFF !important;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: rgb(18,18,18);
+    letter-spacing: 0px;
+    line-height: 1.25;
+}
+
+.pega-login-card {
+    box-shadow: none !important;
+}
+
+.pega-login-actions button {
+    display: block;
+    width: 100%;
+    background-color: rgb(0, 125, 153) !important;
+    border-color: rgb(0, 125, 153) !important;
+    color: rgb(255, 255, 255);
+    padding: 0.625rem 0.875rem;
+    letter-spacing: 0.012rem;
+    line-height: 1.5;
+    box-shadow: none !important;
+}
+
+.d-none {
+    display:none !important;
+}
+
+.left-nav {
+    width: 300px;
+    border-top: 2px solid #00a2c7;
+    border-right: 2px solid #00a2c7;
+    border-bottom: 2px solid #00a2c7;
+}
+
+.top-item {
+    background-color: #00a2c7;
+    color: #FFFFFF;
+}
+
+.top-item span {
+    color: #FFF;
+}
+
+.layout-max-width .mat-card-content,
+.layout-max-width .mat-card-actions {
+    max-width: 1000px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+mat-list.mat-list.mat-list-base {
+    padding-top: 0 !important;
+}
+
+.mat-drawer-container {
+    height: calc(100vh - 64px);
+}
+
+
+body, #container {
+    min-height: 100vh !important;
+    height: 100vh !important;
+}
+
+.content-items-maxwidth {
+    max-width: 640px !important;
+}
+
+.padding-2x {
+    padding: 20px;
+}
+
+.margin-b-2x { 
+    margin-bottom: 20px;
+}
+
+.login {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+    width: 100%;
+    height: calc(100vh - 64px);
+    background-color: #FFF;
+}
+
+label.Heading-4 {
+    font-size: 24px;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #888;
+    padding-bottom: 10px;
+}
+
+// .pega-column {
+//     margin: 0 !important;
+//     padding: 0 !important;
+// }
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-sofi: (
+    50 : #e0f4f8,
+    100 : #b3e3ee,
+    200 : #80d1e3,
+    300 : #4dbed8,
+    400 : #26b0cf,
+    500 : #00a2c7,
+    600 : #009ac1,
+    700 : #0090ba,
+    800 : #0086b3,
+    900 : #0075a6,
+    A100 : #d0efff,
+    A200 : #9ddeff,
+    A400 : #6accff,
+    A700 : #51c3ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+// mandatory stuff for theming
+$sofi-palette-primary: mat-palette($md-sofi);
+$sofi-palette-accent:  mat-palette($md-sofi);
+
+// include the custom theme components into a theme object
+$sofi-theme: mat-light-theme($sofi-palette-primary, $sofi-palette-accent);
+
+// include the custom theme object into the angular material theme
+@include angular-material-theme($sofi-theme);
