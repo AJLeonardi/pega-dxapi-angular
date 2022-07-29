@@ -54,6 +54,7 @@ import { CaptionComponent } from './_subcomponents/caption/caption.component';
 import { CreatecaselistComponent } from './_subcomponents/createcaselist/createcaselist.component';
 import { LoginComponent } from './login/login.component';
 import { TextinputComponent } from './_fieldcomponents/textinput/textinput.component';
+import { PasswordComponent } from './_fieldcomponents/password/password.component';
 import { TextareaComponent } from './_fieldcomponents/textarea/textarea.component';
 import { CheckboxComponent } from './_fieldcomponents/checkbox/checkbox.component';
 import { EmailComponent } from './_fieldcomponents/email/email.component';
@@ -108,6 +109,7 @@ import { AuthPageComponent } from './auth-page/auth-page.component';
     AutocompleteComponent,
     CasedetailsComponent,
     TextComponent,
+    PasswordComponent,
     BreadcrumbComponent,
     DateComponent,
     ParagraphComponent,
