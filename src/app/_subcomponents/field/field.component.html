@@ -5,6 +5,7 @@
 <div [ngSwitch]="fieldComp.control?.type" class="pega-form-left" *ngIf="fieldComp?.visible && fieldComp.control?.type!='pxIcon'">
   <app-textinput [fieldComp]="fieldComp" *ngSwitchCase="'pxTextInput'" [formGroup]="formGroup" [noLabel]=noLabel [CaseID]="CaseID" [RefType$]="RefType$"></app-textinput>
   <app-password [fieldComp]="fieldComp" *ngSwitchCase="'pxPassword'" [formGroup]="formGroup" [noLabel]=noLabel [CaseID]="CaseID" [RefType$]="RefType$"></app-password>
+  <app-password [fieldComp]="fieldComp" *ngSwitchCase="'pxObfuscated'" [formGroup]="formGroup" [noLabel]=noLabel [CaseID]="CaseID" [RefType$]="RefType$"></app-password>
   <app-number [fieldComp]="fieldComp" *ngSwitchCase="'pxInteger'" [formGroup]="formGroup" [noLabel]=noLabel [CaseID]="CaseID" [RefType$]="RefType$"></app-number>
   <app-number [fieldComp]="fieldComp" *ngSwitchCase="'pxNumber'" [formGroup]="formGroup" [noLabel]=noLabel [CaseID]="CaseID" [RefType$]="RefType$"></app-number>
   <app-textinput [fieldComp]="fieldComp" *ngSwitchCase="'pxPhone'" [formGroup]="formGroup" [noLabel]=noLabe [CaseID]="CaseID" [RefType$]="RefType$"></app-textinput>
