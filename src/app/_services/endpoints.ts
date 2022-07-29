@@ -9,7 +9,7 @@ export const endpoints: any = {
   // Change this URL if you want to point the Angular application at another Pega server.
   
   //PEGAURL: "https://leona.pegatsdemo.com/prweb",
-  PEGAURL: "https://platform-demo.pegatsdemo.com//prweb",
+  PEGAURL: "https://platform-demo.pegatsdemo.com/prweb",
 
   // Specify an appAlias to allow operators to access application when this application's access
   //  group is not the default access group specified within the operator record.
