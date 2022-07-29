@@ -72,6 +72,10 @@ export class PasswordComponent implements OnInit {
       this.fieldControl.disable();
     }
 
+    if (this.fieldComp.readOnly) {
+      this.fieldControl.disable();
+    }
+
     // add a controlName so can use it when referencing the control
     this.formGroup.addControl(this.fieldComp.controlName, this.fieldControl);
     this.fieldControl.setValue(this.selectedValue);
